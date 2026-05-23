@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Tinh Tú | Gemini Quest Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="hero">
+        <h2 style="color: #a0aec0; font-size: 1.2rem; letter-spacing: 2px;">HƯỚNG DẪN TƯƠNG TÁC GEMINI X SÁNG TẠO BẢN ĐỒ THỦ CÔNG</h2>
+        <h1 class="gradient-text" style="font-size: 2.5rem; margin-top: 10px;">NHIỆM VỤ: BIẾN AI THÀNH "ĐỒNG KIẾN TẠO" LỘ TRÌNH CỦA RIÊNG BẠN!</h1>
+        <p>Đừng chỉ tạo những bảng biểu kế hoạch khô khan trên Google Sheets!<br>Hãy để Gemini đóng vai "Chiến lược gia" giúp bạn phác thảo lộ trình, sau đó sử dụng bút chì và bút màu trên bàn để tự tay "họa" nên Bản đồ Nhiệm vụ (Quest Map) độc nhất vô nhị của bạn.</p>
+        <a href="#tram-1" class="btn" onclick="smoothScroll(event, 'tram-1')">Khởi Động Phi Thuyền 🚀</a>
+    </header>
+
+    <main class="container">
+        
+        <section id="tram-1" class="card">
+            <h2>🛰️ Bước 1: Triệu hồi "Chiến lược gia" Gemini</h2>
+            <p>Hãy copy câu lệnh (Prompt) dưới đây, điền thông tin cá nhân của bạn vào dấu <span style="color:#FF007A; font-weight:bold;">[...]</span> và gửi cho Gemini:</p>
+            
+            <div class="code-box" id="prompt-text-1">
+                "Hãy đóng vai một chuyên gia chiến lược sự nghiệp cấp cao và cố vấn tuyển dụng toàn cầu.<br>
+                Tôi đang là sinh viên năm <span class="highlight">[...]</span> chuyên ngành <span class="highlight">[...]</span>.<br>
+                Qua các bài đánh giá năng lực và phân tích cốt lõi, tôi sở hữu nhóm tính cách <span class="highlight">[NHẬP VÀO KHUNG TÍNH CÁCH DISC ĐÃ TEST Ở BƯỚC 1]</span> và được định vị thuộc hệ nhân vật sự nghiệp <span class="highlight">[1 TRONG 4 KÝ TỰ TRONG DISC]</span>.<br>
+                Hiện tại, mục tiêu lớn nhất mà tôi quyết tâm đạt được trong vòng 6-12 tháng tới là <span class="highlight">[ĐIỀN MỤC TIÊU CỦA BẠN]</span>.<br>
+                Nhiệm vụ của bạn là phân tích các dữ liệu trên để chia nhỏ mục tiêu của tôi thành một lộ trình hành động toàn diện gồm 4 chặng tương ứng với Quý 1, Quý 2, Quý 3, Quý 4. Với mỗi chặng, hãy chỉ rõ đúng 1 nhiệm vụ trọng tâm, thực tế và có tính khả thi cao nhất bằng một câu ngắn gọn dưới 15 chữ;<br>
+                đồng thời gợi ý cụ thể 1 biểu tượng (icon) nét đơn giản, dễ vẽ tay để tôi có thể tự họa lên bản đồ giấy của mình (ví dụ: nếu nhiệm vụ là tích lũy kiến thức chuyên ngành, hãy gợi ý vẽ icon một cuốn sách mở kèm ngôi sao tỏa sáng).<br>
+                Cuối cùng, hãy đưa ra một dự báo chuẩn xác về rào cản tâm lý hoặc bẫy trì hoãn lớn nhất mà mô hình tính cách của tôi thường vấp phải trong lộ trình này, kèm theo đúng 1 giải pháp hành động tối giản nhưng mang tính thực thi ngay lập tức vào ngày mai.<br>
+                Hãy phản hồi với giọng điệu sắc sảo, dứt khoát, uy tín, mang tính định hướng cao và trình bày kết quả theo đúng cấu trúc chuẩn mực sau:<br>
+                🗺️ QUÝ [1/2/3/4]: [Nhiệm vụ trọng tâm]<br>
+                🎨 Vật phẩm vẽ tay: [Mô tả chi tiết icon nét đơn giản, dễ vẽ]<br>
+                👾 RÀO CẢN LỚN NHẤT: [Tên bẫy trì hoãn tâm lý] - [Giải thích ngắn gọn]<br>
+                🛡️ BÍ KÍP VƯỢT ẢI: [1 hành động nhỏ cụ thể để thực thi ngay lập tức]"
+            </div>
+            
+            <button class="btn-outline" onclick="copyPrompt('step1')">📋 Bấm để Copy Câu Lệnh</button>
+        </section>
+
+        <section class="card">
+            <h2>🎨 Bước 2: Nhờ AI gợi ý "Vật phẩm" (Thiết kế Icon thủ công)</h2>
+            <p>Bạn không biết vẽ gì để biểu diễn cho các nhiệm vụ đó? Đừng lo, hãy nhắn tiếp cho Gemini:</p>
+            <div class="code-box">
+                "Với các nhiệm vụ ở trên, hãy gợi ý cho tôi các hình ảnh biểu tượng (icon) nét đơn giản, dễ vẽ bằng bút màu để tôi tự vẽ lên bản đồ giấy của mình."
+            </div>
+            <button class="btn-outline" onclick="copyPrompt('step2')" style="margin-bottom: 15px;">📋 Bấm để Copy Câu Lệnh</button>
+            <p style="color: #a0aec0; font-size: 0.9rem;">(Ví dụ: Gemini có thể gợi ý vẽ một "chiếc cúp nhỏ" cho mục tiêu học bổng, hoặc một "biểu tượng khiên chữ A+" cho mục tiêu ngoại ngữ).</p>
+        </section>
+
+        <section class="card">
+            <h2>🗺️ BƯỚC 3: Phác thảo Quest Map</h2>
+            <p>Bây giờ, toàn bộ nguyên liệu đã có sẵn trên màn hình điện thoại của bạn. Hãy rời mắt khỏi điện thoại một chút và bắt đầu "họa" nên Bản đồ Nhiệm vụ (Quest Map) độc nhất vô nhị của mình!</p>
+            <ul style="margin-left: 20px; color: #e2e8f0; margin-top: 15px; margin-bottom: 15px;">
+                <li style="margin-bottom: 10px;"><strong>Chọn Địa hình (Layout):</strong> Nhìn lên màn hình sân khấu và chọn 1 Layout (có thể tham khảo 3 mẫu layout BTC gợi ý: Cây Kỹ Năng, Vượt Đảo, Trạm Tàu) hoặc tự sáng tạo. Dùng bút chì phác họa nhanh khung đường đi.</li>
+            </ul>
+
+            <div class="layout-gallery">
+                <div class="gallery-item" onclick="openModal('layout-cay-ky-nang.jpg', 'Mẫu Gợi Ý: Cây Kỹ Năng')">
+                    <img src="layout-cay-ky-nang.jpg" alt="Mẫu Cây Kỹ Năng">
+                    <span>🌳 Mẫu Cây Kỹ Năng</span>
+                </div>
+                <div class="gallery-item" onclick="openModal('layout-vuot-dao.jpg', 'Mẫu Gợi Ý: Vượt Đảo')">
+                    <img src="layout-vuot-dao.jpg" alt="Mẫu Vượt Đảo">
+                    <span>🏝️ Mẫu Vượt Đảo</span>
+                </div>
+                <div class="gallery-item" onclick="openModal('layout-tram-tau.jpg', 'Mẫu Gợi Ý: Trạm Tàu')">
+                    <img src="layout-tram-tau.jpg" alt="Mẫu Trạm Tàu">
+                    <span>🚉 Mẫu Trạm Tàu</span>
+                </div>
+            </div>
+
+            <ul style="margin-left: 20px; color: #e2e8f0; margin-bottom: 15px;">
+                <li><strong>Chế tạo Vật phẩm:</strong> Dựa vào phần Vật phẩm vẽ tay mà Gemini vừa gợi ý cho từng Quý, hãy dùng bút màu/bút dạ vẽ các icon đó vào các cột mốc tương ứng (Quý 1 đến Quý 4). Đừng lo nếu bạn vẽ không đẹp, icon càng "độc lạ" càng ấn tượng!</li>
+            </ul>
+            
+            <div class="alert-red">
+                ⚠️ Luật bảo mật tuyệt đối ⚠️<br>
+                Ghi MẬT DANH / CODE NAME của bạn (Ví dụ: Elsa_K66, IronMan_Phenikaa) thật to và rực rỡ ở góc bản đồ. Tuyệt đối không ghi tên thật!
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>👾 Bước 4: Bổ sung và hoàn thiện lộ trình</h2>
+            <p>Để bản đồ chân thực và sát với thực tế nhất, một lộ trình anh hùng không thể thiếu các rào cản. Hãy nhìn vào phần cuối cùng trong câu trả lời của Gemini (👾 RÀO CẢN LỚN NHẤT).</p>
+            <ul style="margin-left: 20px; color: #e2e8f0; margin-top: 15px;">
+                <li style="margin-bottom: 10px;"><strong>Triệu hồi Quái vật:</strong> Lấy bút màu đỏ (hoặc màu tối) vẽ một con "Quái vật nhỏ" — hoặc đơn giản là một dấu [X] to đùng, một đám mây đen, một hòn đá ngáng đường — vào vị trí chặng (Quý) mà bạn nghĩ mình dễ bị nản chí nhất. Ghi chú tên của "Bẫy trì hoãn" đó ngay bên cạnh.</li>
+                <li><strong>Trang bị Bảo bối:</strong> Ngay sát bên cạnh con quái vật, dùng một màu mực thật sáng chép lại BÍ KÍP VƯỢT ẢI mà chuyên gia Gemini đã cấp cho bạn để nhắc nhở bản thân hành động ngay vào ngày mai!</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="treasure-box">
+        <h2 class="gradient-text">🎁 Bí kíp từ BTC</h2>
+        <p>15 Avatar hoàn thành Bản đồ vẽ tay sáng tạo nhất, nét vẽ "độc lạ" nhất và đem dán lên bức tường "Triển lãm thầm lặng" nhanh nhất sẽ nhận được Phần quà tiếp tế đặc biệt từ ban tổ chức.</p>
+        <br>
+        <p style="font-size: 1.2rem; font-weight: bold;">Lấy bút màu lên và bắt đầu Hành trình của bạn thôi! Let's go! 🚀</p>
+    </footer>
+
+    <div id="image-modal" class="modal" onclick="closeModal()">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
